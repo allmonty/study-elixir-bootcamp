@@ -16,13 +16,14 @@ defmodule Discuss.Router do
   scope "/", Discuss do
     pipe_through :browser # Use the default browser stack
 
-    ##### to the url="/topics/new" call the method :new from TopicController
-    get "/", TopicController, :index
-    get "/topics/new", TopicController, :new
-    post "/topics", TopicController, :create
-    ##### the ":id" thing is called wildcard, used to capture some parameter
-    get "/topics/:id/edit", TopicController, :edit
-    put "/topics/:id", TopicController, :update
+    # ##### to the url="/topics/new" call the method :new from TopicController
+    # get "/", TopicController, :index
+    # get "/topics/new", TopicController, :new
+    # post "/topics", TopicController, :create
+    # ##### the ":id" thing is called wildcard, used to capture some parameter
+    # get "/topics/:id/edit", TopicController, :edit
+    # put "/topics/:id", TopicController, :update
+    resources "/", TopicController
   end
 
   # Other scopes may use custom stacks.
