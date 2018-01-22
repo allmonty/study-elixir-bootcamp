@@ -30,4 +30,12 @@ defmodule Discuss.Router do
   # scope "/api", Discuss do
   #   pipe_through :api
   # end
+
+  scope "/auth", Discuss do
+    pipe_through :browser
+
+    get "/:provider", AuthController, :request
+    get "/:provider/callback", AuthController, :callback
+  end
+
 end
