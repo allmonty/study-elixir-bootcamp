@@ -20,6 +20,9 @@ defmodule Discuss.Router do
     get "/", TopicController, :index
     get "/topics/new", TopicController, :new
     post "/topics", TopicController, :create
+    ##### the ":id" thing is called wildcard, used to capture some parameter
+    get "/topics/:id/edit", TopicController, :edit
+    put "/topics/:id", TopicController, :update
   end
 
   # Other scopes may use custom stacks.
