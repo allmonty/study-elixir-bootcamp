@@ -13,7 +13,8 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 
 ## Lint
 
-``` mix format mix.exs "lib/**/*.{ex,exs}" "test/**/*.{ex,exs}" ```
+Using Elixir >= 1.6:
+``` mix format mix.exs "lib/**/*.{ex,exs}" "test/**/*.{ex,exs}" "web/controllers/*.{ex,exs}" "web/models/*.{ex,exs}" ```
 
 ## Learn more
 
