@@ -35,7 +35,7 @@ function renderComment(event) {
 
 function commentTemplate(comment) {
   return `
-    <li class"collection-item">
+    <li class="collection-item">
       ${comment.content}
     </li>
   `;
